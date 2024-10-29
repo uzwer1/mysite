@@ -1,0 +1,70 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body, a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #eee;
+}
+    
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    font-size: 28px;
+}
+
+.content {
+    position: relative; 
+    display: flex;
+    /* min-height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100%; 
+    box-sizing: border-box;
+    /* z-index: 1; */
+    background-color: #333;
+    background-size: url(/404.gif);
+}
+.content img{
+    /* box-shadow: 0 0 15px 35px #0f0; */
+    /* mask: url('/404mw.png'); */
+    /* clip-path: circle(60px at center); */
+    mask-image: url(404.svg);
+    /* stroke: black; */
+    /* fill: blue; */
+    /* z-index: -1; */
+}
+a {
+    text-decoration: none; 
+    display: inline-block;
+    position: absolute; 
+    bottom: 48px; 
+    font-size: 1.5em; 
+    /* opacity: 1; */
+    /* z-index: 1; */
+    font-weight: bolder;
+}
+
+a:hover {opacity: 0.7;}
+
+
+
+/* @media only screen and (max-width: 460px), screen and (max-height: 700px) {
+.content {position:static;}
+
+body {background-size:cover}
+} */
+
+/* @media handheld {.content} */

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Галерея</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8">
+	<link type="text/css" rel="stylesheet" href="css/gallery.css">
+<style>
+@media screen {
+.ya-map-nav{
+background-color: #7a7a7a;
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  font-size: 1.4em;
+  z-index: 10;
+}
+a nav.ya-map-nav{
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 3px 15px; 
+  border-radius: 8px;
+  background-color: #a1a1a1c8;
+}
+a nav.ya-map-nav:hover{
+    background-color: #b2b2b232;
+}
+}
+
+@media (max-width: 1380px) {
+.ya-map-nav{
+    top: 30px;
+    font-size: 1.4em;
+    z-index: 10;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    position: absolute;
+    left: 72%;
+}
+}
+    </style>
+</head>
+<body>
+<section id=carousel>
+    <div class="container">
+        <div class="carousel">
+            <input type="radio" name="slides" checked="checked" id="slide-1">
+            <input type="radio" name="slides" id="slide-2">
+            <input type="radio" name="slides" id="slide-3">
+            <input type="radio" name="slides" id="slide-4">
+            <input type="radio" name="slides" id="slide-5">
+            <input type="radio" name="slides" id="slide-6">
+            <ul class="carousel__slides">
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="imags/2022/001.webp" name="001" alt="">
+                        </div>
+                        <figcaption>
+                            <h4>Триколор</h4>
+                            Раскладка пола тремя цветами плитки
+                            <!-- <span class="credit">Photo: </span> -->
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="imags/2022/005.webp" name="005" alt="">
+                        </div>
+                        <figcaption>
+                            <h4>Просто и со вкусом</h4>
+                            Вариант не раз доказавший свою состоятельность
+                            <!-- <span class="credit">Photo: </span>                             -->
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="imags/2022/009.jpg" alt="">
+                        </div>
+                        <figcaption>
+                            <h4>Создай уют, тому кого ценишь</h4>
+                            Для тех, кто ценит не форму, но содержание
+                            <!-- <span class="credit">Photo: </span>                             -->
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="imags/2022/004.webp" alt="">
+                        </div>
+                        <figcaption>
+                            <h4>Комбинирование</h4>
+                            Облицовка зон повышенной влажности и покраска зон со средней и малой влажностью
+                            <!-- <span class="credit">Photo: </span>                             -->
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="imags/2022/003.webp" alt="">
+                        </div>
+                        <figcaption>
+                            <h4>Монохром и дерево</h4>
+                            Монохромная стена из плитки и мозаики в сочетании с напольной плиткой светлого тона под дерево
+                            <!-- <span class="credit">Photo: </span>                             -->
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="imags/2022/002.webp" alt="">
+                        </div>
+                        <figcaption>
+                        	<h4>Акцентирование</h4>
+                            Простой и выразительный прием с применением мозаики
+                            <!-- <span class="credit">Photo: </span>                             -->
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>    
+            <ul class="carousel__thumbnails">
+                <li>
+                    <label for="slide-1"><img src="imags/2022/001.webp" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-2"><img src="imags/2022/005.webp" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-3"><img src="imags/2022/009.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-4"><img src="imags/2022/004.webp" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-5"><img src="imags/2022/003.webp" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-6"><img src="imags/2022/002.webp" alt=""></label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root{
+  --color-font-1: #2e2e2e;
+  --color-font-2: #a6a220;
+  --color-font-3: #a00c0c;
+  --color-font: var(--color-font-2);
+  --color-font-category: rgb(189, 189, 189);
+  --color-th: #e3e3e3;
+  --bg-tr-nth-odd-color: #efefef;
+  --bg-tr-nth-even-color: #ffffffaa;
+  --bg-tr-hover: #a0c5e8;
+  --bg-th-color: #36304A;
+  --bg-body: linear-gradient(45deg, #fee, #aae);
+  --ico-filter-invert: .5;
+  --table-width: 90%;
+  --table-shadow: 0 0 76px -36px #1c02ff;
+  /* --table-align: ; */
+}
+
+/* 
+1. Заложить фундамент адаптива — viewports.
+  1.1. Desktop: сжать таблицу до 80-90% ширины экрана.
+  1.2. Mobile: 100%
+2. Настроить быстрое управление строками: расшир-е, суж-е, сдвиг.
+  2.1. Сверстать макет умной строки: чек-анчек, ввод объемов, выбор пакетов.
+3. Фон
+
+
+*/
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+    font-family: Arial, sans-serif;
+    color: var(--color-font);
+}
+body{
+  /* background: var(--bg-body); */
+  background: linear-gradient(0deg, #00243e 10%, #bbf 19%, #c0aeed 53%, #ffffff 96%, #ffffff);
+}
+  
+nav.nav{
+width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+  margin: 50px auto;
+}
+
+.fa-image{
+  /* margin: 10px 51px 15px 62px; */
+  color: rgba(255,183,107,.9);
+}
+.fa-map-marker, .fa-play-circle-o{
+    /* margin: 10px 51px 15px 0px; */
+  }
+  .fa-map-marker{
+    color: rgba(243,84,81,.9);
+}
+.fa-play-circle-o{
+  color: rgba(204,255,96,.9)
+}
+.fon {
+  /* background: linear-gradient(to bottom, #e8e8e8 0%, #828c95 36%, #28343b 100%); */
+  background: url("../imags/ico/1200x402.jpg") 50% 0 no-repeat;
+  background-size: 83%;
+    
+}
+.t-pri {
+    width: 97%;
+    margin: auto;    
+}
+.icon {
+    width:40px;
+}
+
+/* Главная таблица */
+table {
+  width: var(--table-width);
+  margin: 0 auto 300px;
+  font-family: Inconsolata, Monaco, Consolas, Andale Mono, Bitstream Vera Sans Mono, Courier New, Courier, monospace;
+  font-style: normal;
+  font-size: 1.5em;
+  border-collapse: collapse;
+  /* box-shadow: var(--table-shadow); */
+}
+
+table.shadow::before {
+  content:"";
+  position: absolute;
+  inset: -5px;
+  transform: translate3d(1px,25px,-1px);
+  background: conic-gradient(from 90deg at 4% -25%, #ffd700, #f79d03, #ee6907, #e6390a, #de0d0d, #d61039, #cf1261, #c71585, #cf1261, #d61039, #de0d0d, #ee6907, #f79d03, #ffd700, #ffd700, #ffd700);
+  filter: blur(40px);
+}
+table.box {
+  /* width: 150px; */
+  /* height: 150px; */
+  border: 2px solid green;
+  background: lightblue;
+  position: relative;
+  transform: translate(0);
+  transform-style: preserve-3d;
+}
+
+/* Где должен обнуляться счетчик: В строке с наименованием очередной категории */
+tr.cat {
+  counter-reset: trCount;
+}
+/* Где должен прирастать счетчик: В каждой строке кроме той, что с наименованием категории */
+tr:not(.cat) {
+  counter-increment: trCount;
+  
+}
+
+/* В какой ячейке расположен номер: в каждой ПЕРВОЙ ячейке КАЖДОЙ строки*/
+tr td:first-of-type::before {
+  content: counter(trCount);
+  font-size: 1.1em;
+  padding-left: 7px;
+}
+
+td{
+  padding: 20px 0;
+  position: relative;
+  
+}
+
+tr:nth-of-type(even):not(.cat) {
+  background: var(--bg-tr-nth-even-color);
+}
+tr:nth-of-type(odd):not(.cat) {
+  background: var(--bg-tr-nth-odd-color);
+}
+tr:hover{
+  background: var(--bg-tr-hover);
+  background-size: contain;
+  opacity: 0.7;
+}
+/* tr td:nth-of-type(1):active tr{
+  background-color: #a0e8a7;
+  background-size: contain;
+  opacity: 0.7;
+} */
+
+/* КАТЕГОРИИ РАБОТ */
+
+th{
+  background-color: var(--bg-th-color);
+  max-height:150px;
+  height:100px;
+  overflow: hidden;
+  color: var(--color-th);
+}
+  
+      /* СТИЛЬ КАТЕГОРИЙ */
+
+/* Размер шрифта*/
+tr th {
+  font-size: 1.9em;
+  padding: 15px; /* Ширина строки категорий (font-size + padding * 2) */
+  
+}
+/* Стиль Категории №1 /Исключение/ */
+tr:first-of-type th {
+  font-size: 1.4rem;
+}
+/* Стиль дополнительных наименований столбцов */
+tr:first-of-type th:nth-last-of-type(-n+2) {
+  color: var(--color-font-category);
+  font-size: 1rem;
+}
+/* Стиль Иконки Категорий */
+tr th:first-of-type {
+  width: 100px; /* ? Жесткий размер по горизонтали для первой ячейки */
+  height: 100px; /* ? Жесткий размер по вертикали для первой ячейки */
+  margin: 30px 50px; /* ? */
+}
+tr th img{
+  box-sizing:content-box; /* ? */
+  width: 90%; /* ? */
+  display: block;
+  border: 3px solid #3d3d3d;
+  border-radius: 20%;
+  padding: 5px; /* Отступы между img и рамкой */
+  filter: invert(var(--ico-filter-invert)); /* Осветление иконок категорий */
+}
+
+  /* Стиль Иконки Категори №1 /Исключение/ */
+  tr:first-of-type th.cat img{
+
+}
+      /* //СТИЛЬ КАТЕГОРИЙ */
+
+/* Идейка сырая с чеканьем позиций прайса */
+tr td:first-of-type::after{
+  content: url(../imags/ico/plus48.svg);
+  filter: brightness(150%) contrast(110%);
+  position: absolute;
+  top: calc(50% - 24px);
+  left: 60px;
+  transition: ease 500ms;
+  display: block;
+  cursor: pointer;
+}
+tr:hover td:first-of-type::after{
+  transform: rotate(45deg);
+  transition: ease 500ms;
+
+}
+/* // */
+
+h1{
+width: 75%;
+font-size: 1.75em ;
+color:red;
+padding: 500px 0 100px;
+margin: 0 auto;
+text-align: center;
+}
+
+h4{
+margin: 15px auto;
+text-align: center;
+
+}
+
+nav.maps-nav{
+  position: fixed;
+  top: 6px;
+  left: 25%;
+  z-index: 1;
+}
+nav.maps-nav a:first-of-type{
+  margin-right: 5px;
+}
+nav.maps-nav a{
+  /* display: block; */
+  font-size: 1em;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px; 
+  border-radius: 11px;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #ccc;
+  text-shadow: 2px 2px #999999;
+}
+
+nav.maps-nav a:hover{
+  background-color: #999;
+  /*font-size: 1em;*/
+  color:#333;
+  text-shadow: 2px 2px #dfdfdf;
+}
+footer.footer{
+width: 100%;
+background: url(../imags/bg/001.png) 0px 101% /110% no-repeat;
+height: 1100px;
+}
+
+#mpurrep{
+    position: relative;
+    left: 80%;
+    /* display: inline-block; */
+    padding: 0 5px;
+    width:220px;
+    height: 100px;
+}
+#mpurrep img{
+    width: 210px;
+}
+
+#cur_year {
+    display: block;
+    position: relative;
+    left: 78.2%;
+    bottom: 34.4%;
+    color: #fff;
+    transform: skewY(19deg);
+    font-family: 'Russo One', sans-serif;
+    font-size: 10.5px;
+    width: 22%;
+    user-select: none;
+}
