@@ -57,7 +57,7 @@
 	<th>Штукатурно-малярные</br> и общестроительные работы</th>
 	<th>ед.измер</th><th>расценка</th>
 </tr>
-Lorem ipsum (dolor sit amet consectetur adipisicing elit. Rerum ut esse, necessitatibus atque, nisi sapiente placeat neque) mollitia obcaecati voluptas dignissimos dicta earum recusandae rem nesciunt id nostrum animi! Sint.
+
 <tr><td></td><td>Штукатурка <strong>откосов</strong> с установкой малярного уголка</td><td>м.п</td><td>550р.</td></tr>
 <tr><td></td><td><span class="str">Штукатурка</span> стен по маякам толщиной менее 3 см</td><td>кв.м</td><td>500р.</td></tr>
 <tr><td></td><td>Штукатурка стен под шпатель</td><td>кв.м</td><td>250р.</td></tr>

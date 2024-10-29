@@ -1,19 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,100..900;1,125,100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Play:wght@400;700&family=Russo+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Unbounded:wght@200..900&display=swap');
+
 
 :root{
+  --size-font: 20px;
+  --size-font-th-ex: .8em;
+  --family-font: var(--family-font-2);
+  --family-font-1: Tahoma, sans-serif;
+  --family-font-2: Verdana, sans-serif;
+  --family-font-th: var(--family-font-th-2);
+  --family-font-th-1: "Russo One", sans-serif;
+  --family-font-th-2: "Play", sans-serif;;
+  --family-font-th-3: ;
   --color-font-1: #2e2e2e;
   --color-font-2: #a6a220;
   --color-font-3: #a00c0c;
-  --color-font: var(--color-font-2);
+  --color-font: var(--color-font-1);
   --color-font-category: rgb(189, 189, 189);
   --color-th: #e3e3e3;
+  --color-th-ex: #b3b3b3;
   --bg-tr-nth-odd-color: #efefef;
   --bg-tr-nth-even-color: #ffffffaa;
   --bg-tr-hover: #a0c5e8;
   --bg-th-color: #36304A;
   --bg-body: linear-gradient(45deg, #fee, #aae);
   --ico-filter-invert: .5;
-  --table-width: 90%;
+  --table-width: 70%;
   --table-shadow: 0 0 76px -36px #1c02ff;
   /* --table-align: ; */
 }
@@ -31,8 +43,8 @@
 *{
     padding: 0;
     margin: 0;
-    font-size: 28px;
-    font-family: Arial, sans-serif;
+    font-size: var(--size-font);
+    font-family: var(--family-font);
     color: var(--color-font);
 }
 body{
@@ -84,7 +96,6 @@ table {
   font-style: normal;
   font-size: 1.5em;
   border-collapse: collapse;
-  /* box-shadow: var(--table-shadow); */
 }
 
 table.shadow::before {
@@ -96,13 +107,20 @@ table.shadow::before {
   filter: blur(40px);
 }
 table.box {
-  /* width: 150px; */
-  /* height: 150px; */
-  border: 2px solid green;
-  background: lightblue;
+  background: #afe7fa;
   position: relative;
   transform: translate(0);
   transform-style: preserve-3d;
+}
+table.box tr td:first-of-type{
+  padding-left: 15px;
+}
+table.box tr td:nth-last-of-type(2){
+  padding-left: 15px;
+}
+table.box tr td:last-of-type{
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /* Где должен обнуляться счетчик: В строке с наименованием очередной категории */
@@ -153,6 +171,12 @@ th{
   height:100px;
   overflow: hidden;
   color: var(--color-th);
+  font-family: var(--family-font-3);
+}
+
+th:nth-last-of-type(-n+2) {
+  font-size: var(--size-font-th-ex) !important;
+  color: var(--color-th-ex);
 }
   
       /* СТИЛЬ КАТЕГОРИЙ */
@@ -168,7 +192,7 @@ tr:first-of-type th {
   font-size: 1.4rem;
 }
 /* Стиль дополнительных наименований столбцов */
-tr:first-of-type th:nth-last-of-type(-n+2) {
+tr:first-of-type{
   color: var(--color-font-category);
   font-size: 1rem;
 }
@@ -198,6 +222,7 @@ tr th img{
 tr td:first-of-type::after{
   content: url(../imags/ico/plus48.svg);
   filter: brightness(150%) contrast(110%);
+  transform: scale(75%);
   position: absolute;
   top: calc(50% - 24px);
   left: 60px;
