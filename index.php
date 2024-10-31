@@ -92,7 +92,7 @@
 
 
 <table class="box shadow">
-<tr class="cat"><th><img src="../imags/ico/46592.png" alt=""></th><th>Гипсокартон</th><th></th><th></th></tr>
+<tr class="cat"><th><img src="../imags/ico/46592.png" alt=""></th><th>Гипсокартон</th><th>ед.измер</th><th>расценка</th></tr>
 <tr><td></td><td>Монтаж ГКЛ на стены по профилю</td><td>кв.м</td><td>500р.</td></tr>
 <tr><td></td><td>Оклеивание стен ГКЛ</td><td>кв.м</td><td>450р.</td></tr>
 <tr><td></td><td>Монтаж ГКЛ на криволинейные стены</td><td>кв.м</td><td>750р.</td></tr>
@@ -114,7 +114,7 @@
 
 
 <table class="box shadow">
-<tr class="cat"><th><img src="../imags/ico/33948.png" alt=""></th><th>Кафель</th><th></th><th></th></tr>
+<tr class="cat"><th><img src="../imags/ico/33948.png" alt=""></th><th>Кафель</th><th>ед.измер</th><th>расценка</th></tr>
 <tr><td></td><td>Подготовка поверхности: грунтовка,</td><td>кв.м</td><td>50р.</td></tr>
 <tr><td></td><td>зачистка,</td><td>кв.м</td><td>50р.</td></tr>
 <tr><td></td><td>(при необходимости) гидроизоляция</td><td>кв.м</td><td>250р.</td></tr>
@@ -134,9 +134,9 @@
 </table>
 
 
-
+<img class="layout_04" src="./imags/ico/500x393.webp" alt="">
 <table class="box shadow">
-<tr class="cat"><th></th><th>Плотницко-столярные работы</th><th></th><th></th></tr>
+<tr class="cat"><th></th><th>Плотницко-столярные работы</th><th>ед.измер</th><th>расценка</th></tr>
 <tr><td></td><td>Укладка фанеры на пол</td><td>кв.м</td><td>350р.</td></tr>
 <tr><td></td><td>Укладка и раскрой подложки</td><td>кв.м</td><td>70р.</td></tr>
 <tr><td></td><td>Укладка ламинированного паркета (доски)</td><td>кв.м</td><td>350р.-500р.</td></tr>
@@ -149,7 +149,7 @@
 
 
 <table class="box shadow">
-<tr class="cat"><th></th><th>Разное</th><th></th><th></th></tr>
+<tr class="cat"><th></th><th>Разное</th><th>ед.измер</th><th>расценка</th></tr>
 <tr><td></td><td>Монтаж потолка "Армстронг" простого</td><td>кв.м</td><td>500р.</td></tr>
 <tr><td></td><td>Монтаж потолка "Армстронг" сложного</td><td>кв.м</td><td>700р.</td></tr>
 <tr><td></td><td>Монтаж подвесного потолка из панелей ПВХ</td><td>кв.м</td><td>500р.</td></tr>
@@ -161,15 +161,25 @@
 <tr><td></td><td>Лакировка вагонки 2 слой</td><td>кв.м</td><td>100р.</td></tr>
 <tr><td></td><td>Лакировка деревянного плинтуса, наличника в 2 слоя</td><td>м.п</td><td>200р.</td></tr>
 </table>
-
 <br>
-
 <!-- <img src="./imags/Clear Card.svg" width="400"alt=""> -->
-
-
+</div>
+<form action="POST">
+	<section>
+		<input type="email" name="" id="">
+		<input type="phone" name="" id="">
+		<input type="password" name="" id="" >
+	</section>
+	<section>
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+	</section>
+	<section>
+		<input type="submit" value="Отправить">
+	</section>
+</form>
 </div>
 
-</div>
+
 <footer class="footer">
     <!-- Copyright © 2000–/*<?php echo date("Y");?>*/ «Триггер» -->
     <div id="mpurrep"><img src="imags/mpurrep0.png" alt="">
